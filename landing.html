@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Interactive Landing Page</title>
+  <link rel="stylesheet" href="landing.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+</head>
+
+<body>
+  <!-- Loading Animation -->
+  <div class="loader-wrapper" id="loader">
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-text">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo-section">
+        <span class="logo-text">MyBrand</span>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+        <li><a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
+        <li><a href="#pricing"><i class="fas fa-tag"></i> Pricing</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="social-icons-nav">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header" id="home">
+    <div class="header-overlay"></div>
+    <div class="container">
+      <h1 data-aos="fade-up" data-aos-duration="1000">Welcome to the Future of Design</h1>
+      <h3 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        Discover the simplicity of creating stunning web experiences
+      </h3>
+      <a href="#features" class="btn btn-primary" data-aos="zoom-in" data-aos-delay="400">
+        <span>Explore More</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
+        <div class="mouse"></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Features</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Everything you need to build amazing products
+      </p>
+      <div class="feature-cards">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Easy to Use</h3>
+          <p>Simple and user-friendly designs for everyone. Get started in minutes with our intuitive interface.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Responsive Design</h3>
+          <p>Optimized for all devices, from desktops to smartphones. Your content looks perfect everywhere.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>Customizable</h3>
+          <p>Unleash your creativity with endless design options. Make it truly yours with powerful customization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content" data-aos="fade-right">
+        <h2 class="section-title">About Us</h2>
+        <p>We are deeply passionate about web development and design, striving to inspire and guide beginners in
+          mastering the fundamentals. Our mission is to make learning accessible and enjoyable, empowering everyone to
+          bring their creative visions to life.</p>
+        <p>With our support, you can confidently build amazing projects that leave a lasting impact. Join thousands of
+          developers who trust us to bring their ideas to life.</p>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+      <div class="about-stats" data-aos="fade-left">
+        <div class="stat-item">
+          <div class="stat-number" data-count="1000">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="150">0</div>
+          <div class="stat-label">Projects Done</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="50">0</div>
+          <div class="stat-label">Awards Won</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-label">Support Hours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Gallery</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Explore our latest work and achievements
+      </p>
+      <div class="gallery-grid">
+        <a href="image 2.jpeg" class="glightbox gallery-item" data-aos="zoom-in" data-aos-delay="100">
+          <img src="image 2.jpeg" alt="Gallery Image 1" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+            <p>Empower your communication with innovative email solutions!</p>
+          </div>
+        </a>
+        <a href="image3.jpeg" class="glightbox gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <img src="image3.jpeg" alt="Gallery Image 2" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+            <p>Connect across platforms effortlessly</p>
+          </div>
+        </a>
+        <a href="image4.jpeg" class="glightbox gallery-item" data-aos="zoom-in" data-aos-delay="300">
+          <img src="image4.jpeg" alt="Gallery Image 3" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+            <p>Connect, engage, and grow with ease</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Real feedback from real people
+      </p>
+      <div class="testimonial-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"This is the best service I've ever used. The team is professional, responsive,
+              and truly cares about their clients. Highly recommended!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JD</div>
+              <div class="author-info">
+                <h4>John Doe</h4>
+                <p>CEO, TechCorp</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Amazing experience! The quality of work exceeded my expectations. I will
+              definitely work with them again on future projec ts."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div class="author-info">
+                <h4>Sarah Miller</h4>
+                <p>Founder, DesignHub</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">"Professional, creative, and reliable. They transformed my vision into reality.
+              Outstanding service from start to finish!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RJ</div>
+              <div class="author-info">
+                <h4>Robert Johnson</h4>
+                <p>Marketing Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn prev-btn" onclick="slideTestimonial(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next-btn" onclick="slideTestimonial(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Pricing Plans</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Choose the perfect plan for your needs
+      </p>
+      <div class="pricing-cards">
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-header">
+            <h3>Starter</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">29</span>
+              <span class="period">/mo</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> 5 Projects</li>
+            <li><i class="fas fa-check"></i> 10GB Storage</li>
+            <li><i class="fas fa-check"></i> Email Support</li>
+            <li><i class="fas fa-times"></i> Priority Support</li>
+            <li><i class="fas fa-times"></i> Custom Domain</li>
+          </ul>
+          <button class="btn btn-outline">Choose Plan</button>
+        </div>
+        <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="featured-badge">Popular</div>
+          <div class="pricing-header">
+            <h3>Professional</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">59</span>
+              <span class="period">/mo</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Unlimited Projects</li>
+            <li><i class="fas fa-check"></i> 100GB Storage</li>
+            <li><i class="fas fa-check"></i> 24/7 Support</li>
+            <li><i class="fas fa-check"></i> Priority Support</li>
+            <li><i class="fas fa-check"></i> Custom Domain</li>
+          </ul>
+          <button class="btn btn-primary">Choose Plan</button>
+        </div>
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-header">
+            <h3>Enterprise</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">99</span>
+              <span class="period">/mo</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Unlimited Everything</li>
+            <li><i class="fas fa-check"></i> Unlimited Storage</li>
+            <li><i class="fas fa-check"></i> Dedicated Support</li>
+            <li><i class="fas fa-check"></i> API Access</li>
+            <li><i class="fas fa-check"></i> Advanced Analytics</li>
+          </ul>
+          <button class="btn btn-outline">Choose Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="media" class="media">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Media Showcase</h2>
+      <div class="media-grid">
+        <div class="media-item" data-aos="fade-right">
+          <h3>Our Introduction Video</h3>
+          <video controls>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="media-item" data-aos="fade-left">
+          <h3>Listen to Our Podcast</h3>
+          <audio controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+          <div class="audio-info">
+            <i class="fas fa-podcast"></i>
+            <p>Discover insights and tips from industry experts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        We'd love to hear from you. Send us a message!
+      </p>
+      <div class="contact-wrapper">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>123 Main Street, City, State 12345</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>info@mybrand.com</p>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you! Your message has been sent successfully.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MyBrand</h3>
+          <p>Creating amazing digital experiences since 2024.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get updates</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MyBrand. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="landing.js"></script>
+</body>
+
+</html>

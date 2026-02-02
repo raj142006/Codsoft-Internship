@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Madhanraj - Java Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Madhanraj, a skilled Java Developer">
+
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+    relstylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
+
+  <!-- Header/Navigation -->
+  <header class="header" id="header">
+    <div class="header__content">
+      <div class="header__logo-container">
+        <div class="header__logo-img-cont">
+          <img src="logo2.jpeg" alt="Madhanraj Logo" class="header__logo-img">
+        </div>
+        <span class="header__logo-sub">Madhanraj</span>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li><a href="#home" class="header__link">Home</a></li>
+          <li><a href="#about" class="header__link">About</a></li>
+          <li><a href="#skills" class="header__link">Skills</a></li>
+          <li><a href="#experience" class="header__link">Experience</a></li>
+          <li><a href="#projects" class="header__link">Projects</a></li>
+          <li><a href="#contact" class="header__link">Contact</a></li>
+        </ul>
+        <div class="header__ham-menu" id="hamMenu">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="home-hero" id="home">
+    <div class="home-hero__content">
+      <h1 class="heading-primary">
+        Hey, I'm <span class="name-highlight">Madhanraj</span>
+      </h1>
+      <div class="home-hero__info">
+        <p class="text-primary typing-container">
+          <span class="typed-text"></span><span class="cursor">|</span>
+        </p>
+      </div>
+      <div class="home-hero__cta">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="home-hero__socials">
+      <a href="#" class="social-icon" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+    <div class="scroll-down">
+      <div class="mouse-wheel"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about sec-pad">
+    <div class="main-container">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Passionate Java Developer building robust and scalable applications
+      </p>
+      <div class="about__content">
+        <div class="about__content-main" data-aos="fade-right">
+          <h3 class="about__content-title">Get to know me!</h3>
+          <div class="about__content-details">
+            <p>
+              Hey! I'm <strong>Madhanraj</strong>, a <strong>Java Developer</strong> located in Tamil Nadu.
+              I have a strong foundation in designing and building efficient, scalable applications.
+            </p>
+            <p>
+              I've done <strong>remote projects</strong> for agencies, consulted for startups, and collaborated
+              with talented people to create <strong>digital products</strong> for both business and consumer use.
+            </p>
+            <p>
+              I'm passionate about coding, learning new technologies, and contributing to impactful projects.
+              Feel free to <strong>contact</strong> me for collaborations or opportunities.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn--primary">Contact Me</a>
+        </div>
+        <div class="about__stats" data-aos="fade-left">
+          <div class="stat-box">
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" data-count="2">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" data-count="5">0</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" data-count="15">0</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills sec-pad">
+    <div class="main-container">
+      <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Technologies and tools I work with
+      </p>
+      <div class="skills-content">
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-header">
+            <span class="skill-name">Java</span>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-header">
+            <span class="skill-name">HTML & CSS</span>
+            <span class="skill-percentage">95%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="95"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
+          <div class="skill-header">
+            <span class="skill-name">React</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="80"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-header">
+            <span class="skill-name">GIT</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="350">
+          <div class="skill-header">
+            <span class="skill-name">Android Development</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="75"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience/Timeline Section -->
+  <section id="experience" class="experience sec-pad">
+    <div class="main-container">
+      <h2 class="section-title" data-aos="fade-up">Experience & Education</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        My journey as a developer
+      </p>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Codsoft Internship</h3>
+            <span class="timeline-date">2024</span>
+            <p>Completed web development internship, creating calculator, landing page, and portfolio projects. Learned
+              modern web technologies and best practices.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Java Development Training</h3>
+            <span class="timeline-date">2023 - 2024</span>
+            <p>Specialized in Java programming, object-oriented design, and application development. Built multiple
+              projects using Java frameworks.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Bachelor's Degree</h3>
+            <span class="timeline-date">2020 - 2024</span>
+            <p>Studied Computer Science and Engineering, focusing on software development, algorithms, and data
+              structures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects sec-pad">
+    <div class="main-container">
+      <h2 class="section-title" data-aos="fade-up">Projects</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Selected work showcasing my skills and creativity
+      </p>
+
+      <!-- Project Filter -->
+      <div class="project-filters" data-aos="fade-up" data-aos-delay="200">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="app">Apps</button>
+        <button class="filter-btn" data-filter="api">API</button>
+      </div>
+
+      <div class="projects__content">
+        <div class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-img-wrapper">
+            <img src="project1.png" alt="Weather App" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <button class="view-details-btn" data-project="1">
+                <i class="fas fa-eye"></i> View Details
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3class="project-title">Weather App</h3>
+              <p class="project-desc">Real-time weather application with 3-day forecast using weather API</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">API</span>
+                <span class="tag">CSS</span>
+              </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="app" data-aos="zoom-in" data-aos-delay="200">
+          <div class="project-img-wrapper">
+            <img src="project2.png" alt="To-Do App" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <button class="view-details-btn" data-project="2">
+                <i class="fas fa-eye"></i> View Details
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">To-Do List App</h3>
+            <p class="project-desc">Task management app with filters and local storage persistence</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">LocalStorage</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="300">
+          <div class="project-img-wrapper">
+            <img src="project3.png" alt="Calculator" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <button class="view-details-btn" data-project="3">
+                <i class="fas fa-eye"></i> View Details
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Advanced Calculator</h3>
+            <p class="project-desc">Scientific calculator with history and theme toggle features</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Math</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact sec-pad">
+    <div class="main-container">
+      <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Have a question or want to work together? Let's connect!
+      </p>
+      <div class="contact__wrapper">
+        <div class="contact__info" data-aos="fade-right">
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>madhanraj@example.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 12345 67890</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Tamil Nadu, India</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" data-aos="fade-left" novalidate>
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <span class="error-message"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you! Your message has been sent successfully.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="main-container">
+      <div class="footer__upper">
+        <div class="footer-section">
+          <h3>Madhanraj</h3>
+          <p>A passionate Java Developer building robust and scalable applications.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Social</h4>
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__lower">
+        &copy; 2024 Madhanraj. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-body" id="modalBody">
+        <!-- Content will be injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="portfolio.js"></script>
+</body>
+
+</html>

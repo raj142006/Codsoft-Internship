@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <div class="calculator">
+        <div class="mode-toggle">
+            <button class="mode-btn active" data-mode="basic">Basic</button>
+            <button class="mode-btn" data-mode="scientific">Scientific</button>
+        </div>
+
+        <div class="display">
+            <div class="history-display" id="historyDisplay"></div>
+            <input type="text" id="result" disabled placeholder="0" />
+        </div>
+
+        <div class="buttons basic-mode" id="buttonContainer">
+            <!-- Basic Calculator Buttons -->
+            <button onclick="clearResult()" class="function-btn span-2">C</button>
+            <button onclick="deleteLast()" class="function-btn">DEL</button>
+            <button onclick="appendValue('/')" class="operator-btn">/</button>
+            
+            <button onclick="appendValue('7')" class="number-btn">7</button>
+            <button onclick="appendValue('8')" class="number-btn">8</button>
+            <button onclick="appendValue('9')" class="number-btn">9</button>
+            <button onclick="appendValue('*')" class="operator-btn">×</button>
+            
+            <button onclick="appendValue('4')" class="number-btn">4</button>
+            <button onclick="appendValue('5')" class="number-btn">5</button>
+            <button onclick="appendValue('6')" class="number-btn">6</button>
+            <button onclick="appendValue('-')" class="operator-btn">-</button>
+            
+            <button onclick="appendValue('1')" class="number-btn">1</button>
+            <button onclick="appendValue('2')" class="number-btn">2</button>
+            <button onclick="appendValue('3')" class="number-btn">3</button>
+            <button onclick="appendValue('+')" class="operator-btn">+</button>
+            
+            <button onclick="appendValue('0')" class="number-btn span-2">0</button>
+            <button onclick="appendValue('.')" class="number-btn">.</button>
+            <button onclick="calculateResult()" class="equal-btn">=</button>
+        </div>
+
+        <div class="buttons scientific-mode hidden" id="scientificButtons">
+            <!-- Scientific Calculator Buttons -->
+            <button onclick="clearResult()" class="function-btn">C</button>
+            <button onclick="deleteLast()" class="function-btn">DEL</button>
+            <button onclick="appendValue('(')" class="function-btn">(</button>
+            <button onclick="appendValue(')')" class="function-btn">)</button>
+            <button onclick="appendValue('/')" class="operator-btn">/</button>
+            
+            <button onclick="calculateFunction('sin')" class="sci-btn">sin</button>
+            <button onclick="appendValue('7')" class="number-btn">7</button>
+            <button onclick="appendValue('8')" class="number-btn">8</button>
+            <button onclick="appendValue('9')" class="number-btn">9</button>
+            <button onclick="appendValue('*')" class="operator-btn">×</button>
+            
+            <button onclick="calculateFunction('cos')" class="sci-btn">cos</button>
+            <button onclick="appendValue('4')" class="number-btn">4</button>
+            <button onclick="appendValue('5')" class="number-btn">5</button>
+            <button onclick="appendValue('6')" class="number-btn">6</button>
+            <button onclick="appendValue('-')" class="operator-btn">-</button>
+            
+            <button onclick="calculateFunction('tan')" class="sci-btn">tan</button>
+            <button onclick="appendValue('1')" class="number-btn">1</button>
+            <button onclick="appendValue('2')" class="number-btn">2</button>
+            <button onclick="appendValue('3')" class="number-btn">3</button>
+            <button onclick="appendValue('+')" class="operator-btn">+</button>
+            
+            <button onclick="calculateFunction('sqrt')" class="sci-btn">√</button>
+            <button onclick="calculateFunction('pow')" class="sci-btn">x²</button>
+            <button onclick="appendValue('0')" class="number-btn">0</button>
+            <button onclick="appendValue('.')" class="number-btn">.</button>
+            <button onclick="calculateResult()" class="equal-btn">=</button>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h3>History</h3>
+                <button onclick="clearHistory()" class="clear-history-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            <div class="history-list" id="historyList">
+                <p class="no-history">No calculations yet</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

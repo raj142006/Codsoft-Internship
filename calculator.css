@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-gradient-start: #667eea;
+    --bg-gradient-end: #764ba2;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --number-btn: rgba(255, 255, 255, 0.15);
+    --operator-btn: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --equal-btn: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --function-btn: rgba(255, 255, 255, 0.1);
+    --sci-btn: rgba(106, 90, 205, 0.3);
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+body.light-theme {
+    --bg-gradient-start: #a8edea;
+    --bg-gradient-end: #fed6e3;
+    --glass-bg: rgba(255, 255, 255, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --number-btn: rgba(255, 255, 255, 0.5);
+    --operator-btn: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --equal-btn: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --function-btn: rgba(255, 255, 255, 0.4);
+    --sci-btn: rgba(102, 126, 234, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveBackground 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes moveBackground {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.theme-toggle i {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.calculator {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    max-width: 450px;
+    width: 100%;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mode-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.history-display {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    min-height: 25px;
+    text-align: right;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.display input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: right;
+    outline: none;
+}
+
+.display input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.buttons.scientific-mode {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+.number-btn {
+    background: var(--number-btn);
+    border: 1px solid var(--glass-border);
+}
+
+.number-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.operator-btn {
+    background: var(--operator-btn);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.operator-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.equal-btn {
+    background: var(--equal-btn);
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.equal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+.function-btn {
+    background: var(--function-btn);
+    border: 1px solid var(--glass-border);
+    font-size: 1rem;
+}
+
+.function-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.sci-btn {
+    background: var(--sci-btn);
+    border: 1px solid var(--glass-border);
+    font-size: 0.95rem;
+}
+
+.sci-btn:hover {
+    background: rgba(106, 90, 205, 0.4);
+    transform: translateY(-2px);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.history-section {
+    margin-top: 25px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.history-header h3 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.clear-history-btn {
+    padding: 8px 12px;
+    background: rgba(255, 87, 108, 0.3);
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.clear-history-btn:hover {
+    background: rgba(255, 87, 108, 0.5);
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--glass-border);
+    transform: translateX(5px);
+}
+
+.history-expression {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.history-result {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.no-history {
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Scrollbar Styling */
+.history-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.history-section::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.history-section::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 10px;
+}
+
+.history-section::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    .display input {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .buttons.scientific-mode {
+        gap: 8px;
+    }
+    
+    .sci-btn {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+}
+
+/* Animation for calculation */
+@keyframes calculate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.calculating {
+    animation: calculate 0.3s ease;
+}
