@@ -272,9 +272,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Feel free to reach out if you have any questions or suggestions!
 
-- **Email:** your.email@example.com
-- **LinkedIn:** [Your LinkedIn Profile]
-- **Portfolio:** [Your Portfolio Website]
+- **Email:** mr2664572@gmail.com
+
 
 ---
 
